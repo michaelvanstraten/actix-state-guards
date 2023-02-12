@@ -1,0 +1,19 @@
+[package]
+name = "actix-state-guards"
+version = "0.1.0"
+edition = "2021"
+authors = ["Michael van Straten"]
+repository = "https://github.com/michaelvanstraten/actix-state-guards"
+documentation = "https://docs.rs/actix-state-guards/"
+keywords = ["actix-web", "middleware", "authentication", "guards"]
+categories = ["web-programming::http-server", "web-programming"]
+readme = "readme.md"
+description = "This crate provides a more flexible guard function for the [`actix-web`] framework"
+license = "MIT"
+
+[dependencies.actix-web]
+version = "4.3"
+default_features = false
+
+[dev-dependencies.actix-web]
+default-features = true
