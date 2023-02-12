@@ -1,21 +1,14 @@
-/*!
+# actix-state-guards
+
 This crate provides a more flexible guard function for the [`actix-web`] framework.
 
 The [`Guard`] acts as a gatekeeper for a specific scope and governs over which request is allowed to pass.
 
 Guards can accept application state as well as types that implement the [`FromReqeust`] trait as parameters.
 They can also execute asynchrones code inside them.
-# Example
+## Example
 
 ```rust
-# use actix_state_guards::UseStateGuardOnApp;
-# use std::fmt::Display;
-# use std::sync::Mutex;
-# use actix_web::App;
-# use actix_web::HttpServer;
-# use actix_web::Responder;
-# use actix_web::ResponseError;
-# use actix_web::{get, web};
 #[derive(Debug)]
 pub struct CounterError();
 
@@ -57,14 +50,5 @@ async fn main() -> Result<(), Box<dyn std::error::Error>> {
     .await?)
 }
 ```
-*/
-pub use errors::*;
-pub use guard::*;
-pub use transform::*;
-pub use use_state_guard::*;
 
-mod errors;
-mod guard;
-mod middleware;
-mod transform;
-mod use_state_guard;
+License: MIT
